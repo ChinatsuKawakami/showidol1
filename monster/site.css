@@ -138,9 +138,18 @@ display: inline-block;
   content: '';
   position: absolute;
   top: -10px;
-  background: #AED137;
+  background: $green;
   width: 30px;
   height: 30px;
+}
+}
+.eat_mouth {
+	-webkit-animation: eat_mouth 0.8s;	
+	-moz-animation: eat_mouth 0.8s;	
+	-ms-animation: eat_mouth 0.8s;	
+	-o-animation: eat_mouth 0.8s;	
+	-animation: eat_mouth 0.8s;	
+	
 }
 
 .hand {

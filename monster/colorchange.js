@@ -12,6 +12,16 @@
   //get element
     var elements = document.getElementsByClassName("colorsfood");
 
+   $('.colorsfood').draggable({});
+	$('.container').droppable({
+		drop: function(event, ui) {
+			eat();
+			$('.mouse').animate({top:'15', left: '15', height:'30px', width:'30px'});
+		},
+		over: function(event, ui) {
+			$('.mouse').animate({top:'3', left: '3', height:'54px', width:'54px'});
+		}
+	})
     //get values to get postion of cursor
     var x;
     var y;
@@ -43,7 +53,7 @@
         //cause event 
         document.body.addEventListener("mousemove", mmove, false);
         document.body.addEventListener("touchmove", mmove, false);
-    }
+    }//end function
 
     //when the cursor is moved, this event causes
     function mmove(e) {
@@ -71,7 +81,7 @@
         drag.addEventListener("touchend", mup, false);
         document.body.addEventListener("touchleave", mup, false);
 
-    }
+    }//end function
 
     //
     function mup(e) {
@@ -79,12 +89,29 @@
 
         //delete handler
         document.body.removeEventListener("mousemove", mmove, false);
-        drag.removeEventListener("mouseup", mup, false);
+        drag.removeEventListener("mouseup",mup, false);
         document.body.removeEventListener("touchmove", mmove, false);
         drag.removeEventListener("touchend", mup, false);
 
         //delete drag class
         drag.classList.remove("drag");
-    }
-})()
+    }//end function
+    
+    
+    //eat food
+    function eat(){
+    	$('.mouth').addClass('eat_mouth');
+    	$('.colorsfood').fadeOut(500);
+    	
+    	setTimeout(function(){
+    		$('.mouth').removeClass('eat_mouth');
+    		showNewFood();
+    	},1000);
+    };//end function
+    
+    function showNewFood(){
+    	$('.colorsfood').css({top: 0,left: 0});
+    	$('.colorsfood').show();
+    }//end function
+})();
 
