@@ -5,6 +5,8 @@
  * /
 
 
+"use strict";
+
 /*Evet grab food*/
 
 (function(){
@@ -106,12 +108,35 @@
     	setTimeout(function(){
     		$('.mouth').removeClass('eat_mouth');
     		showNewFood();
+    		
     	},1000);
     };//end function
+    function randumNum(){
+    	var numRandum = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+    	
+    	var ranCss ='#'+ numRandum[Math.floor(Math.random()*17)] + numRandum[Math.floor(Math.random() * 17)]
+    	+numRandum[Math.floor(Math.random() * 17)]+numRandum[Math.floor(Math.random() * 17)]
+    	+numRandum[Math.floor(Math.random() * 17)]+numRandum[Math.floor(Math.random() * 17)];
+    	
+       return ranCss;
+    }
     
+    function changeFoodBodyColor(){
+   	 var css1 = randumNum();
+   	 
+   	$('.colorsfood').css("background-color",css1);
+       $('.iris').css("background",css1);
+   }
     function showNewFood(){
+    	
+ 
     	$('.colorsfood').css({top: 0,left: 0});
     	$('.colorsfood').show();
+    	changeFoodBodyColor();
     }//end function
+    
+  
+    
+
 })();
 
