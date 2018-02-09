@@ -13,7 +13,8 @@
  
   //get element
     var elements = document.getElementsByClassName("colorsfood");
-
+    
+    
    $('.colorsfood').draggable({});
 	$('.container').droppable({
 		drop: function(event, ui) {
@@ -107,6 +108,7 @@
     	
     	setTimeout(function(){
     		$('.mouth').removeClass('eat_mouth');
+    		
     		showNewFood();
     		
     	},1000);
@@ -124,7 +126,7 @@
     function changeFoodBodyColor(){
    	 var css1 = randumNum();
    	 
-   	$('.colorsfood').css("background-color",css1);
+     	$('.colorsfood').css("background-color",css1);
        $('.iris').css("background",css1);
    }
     function showNewFood(){
