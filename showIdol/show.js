@@ -5,41 +5,73 @@ Description: This is html to show the idol photo
  */
 $(document).ready(function(){
 	
+	//set values to adjust range in bar
 	let slider;let doslider; let ayuslider; let haruslider;
 	
 	slider = document.getElementById("myRange");
 	doslider = document.getElementById("doRange");
 	ayuslider = document.getElementById("ayuRange");
 	haruslider = document.getElementById("haruRange");
-	
-	
-	
+	//set values to change context in paragraph
 	let masademo; let dodemo; let ayudemo; let harudemo;
 	
-	
 	masademo = document.getElementById("demo");
-	
 	dodemo = document.getElementById("dodemo");
 	ayudemo = document.getElementById("ayudemo");
 	harudemo = document.getElementById("harudemo");
+	
 	slider.oninput = function (){masademo.innerHTML = this.value;}
 	doslider.oninput=function(){dodemo.innerHTML = this.value;}
 	ayuslider.oninput=function(){ayudemo.innerHTML = this.value;}
 	haruslider.oninput=function(){harudemo.innerHTML = this.value;}
 	
-	
-	masademo.innerHTML = slider.value;
-	dodemo.innerHTML = doslider.value;
-	ayudemo.innerHTML = ayuslider.value;
-	harudemo.innerHTML = haruslider.value;
+	// insert value in slider to paragraph
+	let masa = masademo.innerHTML = slider.value;
+	let doo = dodemo.innerHTML = doslider.value;
+	let ayumin = ayudemo.innerHTML = ayuslider.value;
+	let harunan = harudemo.innerHTML = haruslider.value;
     
-	if(masademo.innerHTML==="2012"){
+	//function to show the photo in div class
+	switch(masa){
+	case "2012":
 		$("#show").addClass("showphoto");
-	}else{
-		$("#show").removeClass("showphoto");
+		break;
+	case "2013":
+		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/satou2013.jpg)"});
+		break;
+	case "2014":
+	   $("#show").addClass("showphoto");
+	   $(".showphoto").attr({style: "content:url(masaImg/sato2014.jpg)"});
+	     break;
+	case "2015":
+		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/sato2015.jpg)"});
+		break;
+	case "2016":
+		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/sato2016.jpg)"});
+		break;
+	case "2017":
+		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/sato2017.jpg)"});
+		break;
+	case "2018":
+		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/sato2018.jpg)"});
+		break;
+	default:
+		break;
 	}
-});
+    
 
+});
+/*	if(masademo.innerHTML==="2012"){
+$("#show").addClass("showphoto");
+
+}else{
+$("#show").removeClass("showphoto");
+}*/
 
 /*function showHistory(){
 	let image = $("<img>");
