@@ -32,7 +32,30 @@ $(document).ready(function(){
 	dodemo.innerHTML = doslider.value;
 	ayudemo.innerHTML = ayuslider.value;
 	harudemo.innerHTML = haruslider.value;
+    
+	if(masademo.innerHTML==="2012"){
+		$("#show").addClass("showphoto");
+	}else{
+		$("#show").removeClass("showphoto");
+	}
 });
+
+
+/*function showHistory(){
+	let image = $("<img>");
+	let div = $("<div>")
+	image.load(function(){
+		div.css({
+			 "width": this.width,
+		     "height": this.height,
+		     "background-image": "url(" + this.src + ")"	
+		});
+		$(".showphoto").append(div);
+		
+	});
+	image.attr("src","satou2012.jpg");
+			
+};*/
 /*
 (function(){
 

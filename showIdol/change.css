@@ -85,3 +85,7 @@ Description: This is html to show the idol photo
     background: #4CAF50;
     cursor: pointer;
 }
+
+.showphoto{
+	content:url("satou2012.jpg");
+}
