@@ -3,38 +3,70 @@ Author: Chinatsu Kawakami
 Created Date: Feb 9 2018
 Description: This is html to show the idol photo
  */
-$(document).ready(function(){
-	
+/*$(document).ready(function(){myFunction()});*/
+
+function functionHarunan(){
 	//set values to adjust range in bar
-	let slider;let doslider; let ayuslider; let haruslider;
-	
+	 let haruslider;
+	 haruslider = document.getElementById("haruRange");
+	 //set values to change context in paragraph
+	   let harudemo;
+
+	 harudemo = document.getElementById("harudemo");
+	 haruslider.oninput=function(){harudemo.innerHTML = this.value;}
+	 let harunan = harudemo.innerHTML = haruslider.value;
+	 
+	 switch(harunan){
+		case "2012":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2012.jpg)"});
+			document.load;
+			break;
+		case "2013":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2013.jpg)"});
+			break;
+		case "2014":
+		   $("#showharunan").addClass("showphotoharunan");
+		   $(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2014.jpg)"});
+		     break;
+		case "2015":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2015.jpg)"});
+			break;
+		case "2016":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2016.jpg)"});
+			break;
+		case "2017":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2017.jpg)"});
+			break;
+		case "2018":
+			$("#showharunan").addClass("showphotoharunan");
+			$(".showphotoharunan").attr({style: "content:url(harunanImg/harunan2018.jpg)"});
+			break;
+		default:
+			break;
+
+		}
+
+}
+
+
+function functionMasa(){
+	let slider;
 	slider = document.getElementById("myRange");
-	doslider = document.getElementById("doRange");
-	ayuslider = document.getElementById("ayuRange");
-	haruslider = document.getElementById("haruRange");
-	//set values to change context in paragraph
-	let masademo; let dodemo; let ayudemo; let harudemo;
-	
+	let masademo; 
 	masademo = document.getElementById("demo");
-	dodemo = document.getElementById("dodemo");
-	ayudemo = document.getElementById("ayudemo");
-	harudemo = document.getElementById("harudemo");
-	
-	slider.oninput = function (){masademo.innerHTML = this.value;}
-	doslider.oninput=function(){dodemo.innerHTML = this.value;}
-	ayuslider.oninput=function(){ayudemo.innerHTML = this.value;}
-	haruslider.oninput=function(){harudemo.innerHTML = this.value;}
-	
 	// insert value in slider to paragraph
+	slider.oninput = function (){masademo.innerHTML = this.value;}
 	let masa = masademo.innerHTML = slider.value;
-	let doo = dodemo.innerHTML = doslider.value;
-	let ayumin = ayudemo.innerHTML = ayuslider.value;
-	let harunan = harudemo.innerHTML = haruslider.value;
-    
-	//function to show the photo in div class
 	switch(masa){
 	case "2012":
 		$("#show").addClass("showphoto");
+		$(".showphoto").attr({style: "content:url(masaImg/satou2012.jpg)"});
+		document.load;
 		break;
 	case "2013":
 		$("#show").addClass("showphoto");
@@ -62,10 +94,96 @@ $(document).ready(function(){
 		break;
 	default:
 		break;
-	}
-    
 
-});
+	}
+}
+
+function functionDo(){
+	let doslider; 
+	doslider = document.getElementById("doRange");
+	let dodemo;
+	dodemo = document.getElementById("dodemo");
+	doslider.oninput=function(){dodemo.innerHTML = this.value;}
+	let doo = dodemo.innerHTML = doslider.value;
+	switch(doo){
+	case "2012":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2012.jpg)"});
+		document.load;
+		break;
+	case "2013":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2013.jpg)"});
+		break;
+	case "2014":
+	   $("#showdo").addClass("showphotodo");
+	   $(".showphotodo").attr({style: "content:url(doImg/do2014.jpg)"});
+	     break;
+	case "2015":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2015.jpg)"});
+		break;
+	case "2016":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2016.jpg)"});
+		break;
+	case "2017":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2017.jpg)"});
+		break;
+	case "2018":
+		$("#showdo").addClass("showphotodo");
+		$(".showphotodo").attr({style: "content:url(doImg/do2018.jpg)"});
+		break;
+	default:
+		break;
+
+	}
+}
+
+function functionAyu(){
+	let ayuslider;
+	ayuslider = document.getElementById("ayuRange");
+	let ayudemo;
+	ayudemo = document.getElementById("ayudemo");
+	ayuslider.oninput=function(){ayudemo.innerHTML = this.value;}
+	let ayumin = ayudemo.innerHTML = ayuslider.value;
+	switch(ayumin){
+	case "2012":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2012.jpg)"});
+		document.load;
+		break;
+	case "2013":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2013.jpg)"});
+		break;
+	case "2014":
+	   $("#showayu").addClass("showphotoayu");
+	   $(".showphotoayu").attr({style: "content:url(ayuImg/ayu2014.jpg)"});
+	     break;
+	case "2015":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2015.jpg)"});
+		break;
+	case "2016":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2016.jpg)"});
+		break;
+	case "2017":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2017.jpg)"});
+		break;
+	case "2018":
+		$("#showayu").addClass("showphotoayu");
+		$(".showphotoayu").attr({style: "content:url(ayuImg/ayu2018.jpg)"});
+		break;
+	default:
+		break;
+
+	}
+}
+
 /*	if(masademo.innerHTML==="2012"){
 $("#show").addClass("showphoto");
 

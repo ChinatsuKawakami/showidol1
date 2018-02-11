@@ -4,7 +4,7 @@ Created Date: Feb 9 2018
 Description: This is html to show the idol photo
 */
 .container{
-	padding: 200px 200px;
+    padding: 100px 200px;
 }
 .satou{
 	
@@ -85,7 +85,37 @@ Description: This is html to show the idol photo
     background: #4CAF50;
     cursor: pointer;
 }
+#show{
+	margin-left:auto;
+	margin-right:auto;
+	/*position: absolute;*/
+	padding: 200px 30px;
+	margin: 10px 0px;
+	/*margin: 200px 20px;*/
+	/*padding:30px 30px;*/
+}
 
-.showphoto{
-	
+#showdo{
+margin-left:auto;
+	margin-right:auto;
+	align-items: center;
+	text-align:center;
+	padding: 0px -40px;
+	margin: -450px 250px;
+}
+#showayu{
+	margin-left:auto;
+	margin-right:auto;
+	align-items: center;
+	text-align:center;
+	padding: 0px -100px;
+	margin: -200px 350px;
+}
+#showharunan{
+	margin-left:auto;
+	margin-right:auto;
+	align-items: center;
+	text-align:center;
+	padding: 0px -100px;
+	margin: -200px 350px;
 }
