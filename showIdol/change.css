@@ -3,6 +3,9 @@ Author: Chinatsu Kawakami
 Created Date: Feb 9 2018
 Description: This is html to show the idol photo
 */
+body{
+	background-image: linear-gradient(-90deg, #FFFFFF, #EB6D00);
+}
 .container{
     padding: 100px 200px;
      
