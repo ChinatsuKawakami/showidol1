@@ -7,6 +7,9 @@ Description: This is html to show the idol photo
     padding: 100px 200px;
      
 }
+h1{
+	text-align:center;
+}
 .satou{
 	
 	margin-left:auto;
