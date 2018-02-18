@@ -2,7 +2,7 @@
 Author: Chinatsu Kawakami
 Created Date: Feb 9 2018
 Description: This is html to show the idol photo
-version: 0.0.5 Added function for changing all idol's photo
+version: 0.0.6 changed size of idol's photo
  -->
  <!DOCTYPE>
  <html lang="en">
@@ -26,6 +26,7 @@ version: 0.0.5 Added function for changing all idol's photo
 
   <input type="range" min="2012" max="2018" value="2012" class="slider" id="myRange" onclick="functionMasa()">
   <p>Year : <span id="demo"></span></p>
+   <div id="show"></div>
 </div>
   
   
@@ -34,6 +35,8 @@ version: 0.0.5 Added function for changing all idol's photo
  <p>Kudou Haruka</p>
  <input type="range" min="2012" max="2018" value="2012" class="doslider" id="doRange" onclick="functionDo()">
   <p>Year : <span id="dodemo"></span></p>
+  
+    <div id="showdo"></div>
  </div>
  
  <!-- Ishida Ayumi -->
@@ -41,6 +44,7 @@ version: 0.0.5 Added function for changing all idol's photo
   <p>Ishida Ayumi</p>
  <input type="range" min="2012" max="2018" value="2012" class="ayuslider" id="ayuRange" onclick="functionAyu()">
   <p>Year : <span id="ayudemo"></span></p>
+   <div id="showayu"></div>
  </div>
 
  <!-- Iikubo Haruna -->
@@ -48,13 +52,14 @@ version: 0.0.5 Added function for changing all idol's photo
  <p>Ikubo Haruna</p>
  <input type="range" min="2012" max="2018" value="2012" class="haruslider" id="haruRange" onclick="functionHarunan()">
   <p>Year : <span id="harudemo"></span></p>
+   <div id="showharunan"></div>
  </div>
  
  </div>
- <div id="show"></div>
- <div id="showdo"></div>
- <div id="showayu"></div>
- <div id="showharunan"></div>
+
+
+
+
  </div>
  <script src="show.js" type="text/javascript"></script>
  </body>
