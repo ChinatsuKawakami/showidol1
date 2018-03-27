@@ -5,6 +5,7 @@ Description: This is html to show the idol photo
 */
 body{
 	background-image: linear-gradient(-90deg, #FFFFFF, #EB6D00);
+    font-style: oblique;
 }
 .container{
     padding: 100px 200px;
@@ -12,6 +13,11 @@ body{
 }
 h1{
 	text-align:center;
+	text-decoration: underline;
+	
+}
+p{
+	
 }
 .satou{
 	
@@ -20,10 +26,10 @@ h1{
 	position: absolute;
 	align-items: center;
 	text-align:center;
-	border: 1px solid #aaa;
+	border: 10px dotted #6495ED;
 	padding: 20px auto;
 	margin: 20px auto;
-   
+    font-size:1.3em;
 }
 .do{
 	
@@ -32,10 +38,10 @@ h1{
 	position: absolute;
 	align-items: center;
 	text-align:center;
-	border: 1px solid #aaa;
+	border: 10px dotted #6495ED;
 	padding: 20px auto;
 	margin: 20px 250px;
-	   
+    font-size:1.3em;
 }
 .ayumin{
 	
@@ -44,10 +50,10 @@ h1{
 	position: absolute;
 	align-items: center;
 	text-align:center;
-	border: 1px solid #aaa;
+	border: 10px dotted #6495ED;
 	padding: 20px auto;
 	margin: 20px 500px;
-	  
+	font-size:1.3em;  
 }
 .harunan{
 	
@@ -56,10 +62,10 @@ h1{
 	position: absolute;
 	align-items: center;
 	text-align:center;
-	border: 1px solid #aaa;
+	border: 10px dotted #6495ED;
 	padding: 20px auto;
 	margin: 20px 750px;
-	   
+    font-size:1.3em;
 }
 .slidecontainer {
     width: 100%;
